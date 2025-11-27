@@ -1,17 +1,29 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(new Article().id);
-        System.out.println(new Article().id);
-        System.out.println(new Article().id);
-        System.out.println(new Article().id);
-        System.out.println(new Article().id);
-        System.out.println(new Article().id);
-        System.out.println(new Article().id);
-        System.out.println(new Article().id);
-        System.out.println(new Article().id);
-        System.out.println(new Article().id);
+//        System.out.println(new Article().id);
+//        System.out.println(new Article().id);
+//        System.out.println(new Article().id);
+//        System.out.println(new Article().id);
+//        System.out.println(new Article().id);
+//        System.out.println(new Article().id);
+//        System.out.println(new Article().id);
+//        System.out.println(new Article().id);
+//        System.out.println(new Article().id);
+//        System.out.println(new Article().id);
+    }
+
+    Article[] articles = new Article[3];
+    articles[0] = new Article();
+    articles[1] = new Article();
+    articles[2] = new Article();
+
+
+   for(Article article :abstract){
+        System.out.println(article.id);
     }
 }
+}
+
 
 class Article {
     static int lastId;   //static 초기화 블럭에서 사용됨
@@ -29,5 +41,4 @@ class Article {
     Article(int id) {       //생성자 오버로딩
         this.id = id;
     }
-
-}
+}}
