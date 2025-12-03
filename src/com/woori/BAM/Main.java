@@ -6,10 +6,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("==게시판==");
+        System.out.println("==프로그램시작==");
         Scanner sc = new Scanner(System.in);
         int lastArticleID = 1;
         List<Article> articles = new ArrayList<>();
+
+
+        Article ar1 =new Article(lastArticleID++, "제목1", "내용1", Util.getDateStr(), 10);
+        articles.add(ar1);
+        Article ar2 =new Article(lastArticleID++, "제목2", "내용2", Util.getDateStr(), 20);
+        articles.add(ar2);
+        Article ar3 =new Article(lastArticleID++, "제목3", "내용3", Util.getDateStr(), 30);
+        articles.add(ar3);
 
         while (true) {
             System.out.printf("cmd) ");
@@ -78,6 +86,7 @@ public class Main {
                 System.out.println("내용 : " + foundArticle.body);
                 System.out.println("조회수 : " + foundArticle.viewCnt);
 
+
             } else {
                 System.out.println("존재하지 않는 명령어 입니다");
             }
@@ -95,13 +104,13 @@ class Article {
 
 
 
+
     public Article(int lastArticleID, String title, String body, String regDate, int viewCnt) {
         this.id = lastArticleID;
         this.title = title;
         this.body = body;
         this.regDate = regDate;    // system(PC) 날짜 + 시간 이 String 저장
         this.viewCnt = viewCnt;    // system(PC) 날짜 + 시간 이 String 저장
-
 
     }
 }
